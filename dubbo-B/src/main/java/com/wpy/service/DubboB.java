@@ -1,6 +1,6 @@
-package com.wpy.service.impl;
+package com.wpy.service;
 
-import com.wpy.service.DubboA;
+import org.springframework.stereotype.Service;
 
 /**
  * <p>Description:</p>
@@ -8,13 +8,11 @@ import com.wpy.service.DubboA;
  * <p>Company: 深圳市旺生活互联网科技有限公司</p>
  *
  * @author wupengyu
- * @date 2017/5/25 11:47
+ * @date 2017/5/25 11:46
  * @copyright 2015-2016 happylifeplat.com All Rights Reserved
  */
-public class DubboAImpl implements DubboA{
+@Service
+public interface DubboB {
 
-    @Override
-    public void test(String flag) {
-
-    }
+    public void test(String flag);
 }
