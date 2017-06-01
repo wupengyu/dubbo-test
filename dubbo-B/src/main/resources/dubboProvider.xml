@@ -7,7 +7,7 @@
         http://code.alibabatech.com/schema/dubbo
         http://code.alibabatech.com/schema/dubbo/dubbo.xsd
         ">     
-	<dubbo:application name="dubboA-service" />
+	<dubbo:application name="dubboB-service" />
         <dubbo:registry  protocol="zookeeper"  address="112.74.27.38:2181"/>
     
 	<!--  使用multicast广播注册中心暴露服务地址 -->  
@@ -16,6 +16,6 @@
 	<!-- 延迟到Spring初始化完成后，再暴露服务,服务调用超时设置为10秒,超时不重试   -->
     <dubbo:provider delay="-1" timeout="10000" retries="0"/>
    	<!-- 暴露的接口列表 -->
-	<dubbo:service interface="com.wpy.service.DubboA" ref="dubboA" />
+	<!--<dubbo:service interface="com.wpy.service.DubboA" ref="dubboA" />-->
 	
 </beans>

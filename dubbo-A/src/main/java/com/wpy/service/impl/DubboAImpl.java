@@ -1,6 +1,7 @@
 package com.wpy.service.impl;
 
 import com.wpy.service.DubboA;
+import org.springframework.stereotype.Service;
 
 /**
  * <p>Description:</p>
@@ -11,12 +12,12 @@ import com.wpy.service.DubboA;
  * @date 2017/5/25 11:47
  * @copyright 2015-2016 happylifeplat.com All Rights Reserved
  */
+@Service("dubboa")
 public class DubboAImpl implements DubboA {
 
-
-
     @Override
-    public void test(String flag) {
-
+    public String test(String flag) {
+        System.out.println("----------service dubboa param: " + flag);
+        return flag;
     }
 }

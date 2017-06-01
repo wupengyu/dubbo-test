@@ -1,7 +1,9 @@
 package com.wpy.service.impl;
 
 import com.wpy.service.DubboA;
+import com.wpy.service.DubboB;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * <p>Description:</p>
@@ -12,13 +14,16 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @date 2017/5/25 11:47
  * @copyright 2015-2016 happylifeplat.com All Rights Reserved
  */
-public class DubboAImpl implements DubboA {
+@Service("dubbob")
+public class DubboAImpl implements DubboB {
 
     @Autowired
-    private DubboA dubboA;
+    private DubboA dubboa;
 
     @Override
     public void test(String flag) {
-        dubboA.test("ss");
+        System.out.println("-----------service dubbob param: "+ flag);
+        String dubboaResult = dubboa.test(flag);
+        System.out.println("-----------service dubboa return: "+ dubboaResult);
     }
 }

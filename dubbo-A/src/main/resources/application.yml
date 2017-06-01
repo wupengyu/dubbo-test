@@ -1,4 +1,14 @@
 server:
   address: localhost
-  port: 8081
+  port: 8084
   contextPath: /
+
+
+logging:
+  level:
+    root: info
+    org.springframework.web: info
+    org.apache.ibatis: info
+    com.happylifeplat.coupon.service: info
+  path: "./logs"
+  file: "dubbo-A.log"
